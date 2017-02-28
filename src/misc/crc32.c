@@ -163,10 +163,9 @@ void crc32_update(crc32_state *ctx, const unsigned char *input, unsigned long le
 
 void crc32_finish(crc32_state *ctx, void *hash, unsigned long size)
 {
-   unsigned char* h;
    unsigned long i;
+   unsigned char* h;
    ulong32 crc;
-
    LTC_ARGCHKVD(ctx != NULL);
    LTC_ARGCHKVD(hash != NULL);
 
