@@ -47,7 +47,7 @@
   @param key     [out] Destination for newly imported key
   @return CRYPT_OK if successful, upon error allocated memory is freed
 */
-int rsa_import_pkcs8(unsigned char *in, unsigned long inlen, rsa_key *key)
+int rsa_import_pkcs8(const unsigned char *in, unsigned long inlen, rsa_key *key)
 {
    int           err;
    void          *zero, *iter;
@@ -95,7 +95,7 @@ int rsa_import_pkcs8(unsigned char *in, unsigned long inlen, rsa_key *key)
       goto LBL_ERR;
    }
    else {
-      decrypted    = in;
+      decrypted    = (unsigned char *)in;
       decryptedlen = inlen;
    }
 
