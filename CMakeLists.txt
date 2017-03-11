@@ -1,5 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 
+<<<<<<< HEAD
 
 include("cmake/HunterGate.cmake")
 HunterGate(
@@ -8,6 +9,8 @@ HunterGate(
 )
 
 
+=======
+>>>>>>> bdbd51a... initial go at cmake build system
 PROJECT(tomcrypt VERSION 1.17)
 
 
@@ -355,19 +358,25 @@ endif()
 
 add_library(tomcrypt ${TOMCRYPT_BUILD_TYPE} ${TOMCRYPT_ALL_SRCS})
 
+<<<<<<< HEAD
 
 hunter_add_package(tommath)
 find_package(tommath CONFIG REQUIRED)
 target_link_libraries(tomcrypt PUBLIC tommath::tommath)
 
 
+=======
+>>>>>>> bdbd51a... initial go at cmake build system
 # Disables handling of some custom defines for overriding stdlib functions
 # Don't need it, and it just causes lining warnings on windows.
 target_compile_definitions(tomcrypt PUBLIC -DLTC_NO_PROTOTYPES -DLTC_SOURCE -DLTC_NO_ASM)
 
 
+<<<<<<< HEAD
 # enables the libtommath MPI backend
 target_compile_definitions(tomcrypt PUBLIC -DLTM_DESC)
+=======
+>>>>>>> bdbd51a... initial go at cmake build system
 
 #######################################
 #       cmake config-mode stuff       #
