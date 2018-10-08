@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # suppress compiler/linker output
 *.[oa]
 *.obj
@@ -95,6 +94,3 @@ coverage*.info
 cov-int/
 .coverity_*
 libtomcrypt.lzma
-=======
-build
->>>>>>> bdbd51a... initial go at cmake build system
