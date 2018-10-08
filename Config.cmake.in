@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 include("${CMAKE_CURRENT_LIST_DIR}/@targets_export_name@.cmake")
 
 include(CMakeFindDependencyMacro)
@@ -6,8 +5,3 @@ include(CMakeFindDependencyMacro)
 if("@tommath_FOUND@")
     find_dependency(tommath CONFIG)
 endif()
-=======
-include(CMakeFindDependencyMacro)
-
-include("${CMAKE_CURRENT_LIST_DIR}/@targets_export_name@.cmake")
->>>>>>> bdbd51a... initial go at cmake build system
